@@ -1,0 +1,12 @@
+<div class="jumbotron centered user">
+
+    <h3 class="text-center">Usuário</h3>
+    <user-form></user-form>
+    <request-error></request-error>
+    <button class="btn btn-block btn-primary form-control" ng-click="userCtrl.setEditMode(true)"
+            ng-show="!editMode" ng-if="currentUser.role === userRoles.coach">Editar
+    </button>
+    <button class="btn btn-block btn-success form-control" ng-click="userCtrl.save(user)"
+            ng-show="editMode">Salvar
+    </button>
+</div>

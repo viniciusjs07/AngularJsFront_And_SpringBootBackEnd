@@ -1,0 +1,1 @@
+angular.module("cadastroCapacitacao", ["ui.router", "ngMessages", "ngStorage"]);

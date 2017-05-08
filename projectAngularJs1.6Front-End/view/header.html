@@ -1,0 +1,26 @@
+<header class="header-user-dropdown" ng-controller="AuthCtrl as authCtrl" ng-if="isUserAuthenticated()">
+
+    <div class="header-limiter">
+        <h1>Embedded Lab.</h1>
+
+        <nav ng-if="isCurrentUserCoach(currentUser)">
+            <a ui-sref="add-user">Adicionar Graduando</a>
+            <a ui-sref="users">Listar Graduandos</a>
+        </nav>
+
+        <nav ng-if="isCurrentUserStudent(currentUser)">
+            <a ui-sref="users">Listar Coaches</a>
+        </nav>
+
+        <div class="header-user-menu">
+            <img src="css/image/user.png" alt="User Image"/>
+
+            <ul>
+                <li><a ng-click="authCtrl.logout()">Logout</a></li>
+                <li><a href="">Settings</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</header>

@@ -1,0 +1,34 @@
+
+<div class="jumbotron centered users">
+    <input class="form-control" type="text" ng-model="criterioDeBusca" placeholder="O que você deseja buscar?">
+    <table class="table table-striped ">
+        <thead>
+        <th><a href="" ng-click="ordenarPor('name')">Nome</a></th>
+        <th><a href="" ng-click="ordenarPor('dateOfBirth')">Idade</a></th>
+        <th><a href="" ng-click="ordenarPor('email')">Email</a></th>
+        <th>Role</th>
+        <th ng-if="currentUser.role == userRoles.coach">Coach</th>
+        <th ng-if="currentUser.role == userRoles.coach"></th>
+        </thead>
+        <tbody>
+        <tr ng-repeat="user in usersCtrl.users | filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDeOrdenacao">
+            <td><a href="#/usuario/{{user.id}}">{{user.name}}</a></td>
+            <td>{{user.dateOfBirth}}</td>
+            <td>{{user.email}}</td>
+            <td class="text-capitalize">{{user.userType}}</td>
+            <td ng-if="currentUser.role == userRoles.coach">{{user.coach.name}}</td>
+            <td ng-if="currentUser.role == userRoles.coach">
+                <button ng-click="usersCtrl.remove(user)" class="btn btn-danger btn-block">Remover usuario
+                </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <!-- <a class="btn btn-primary btn-block" ui-sref="add-user"
+       ng-if="currentUser.role == userRoles.coach"> Adicionar Graduando</a> -->
+
+    <div ng-show="error">
+        <ui-alert>{{error}}</ui-alert>
+    </div>
+</div>

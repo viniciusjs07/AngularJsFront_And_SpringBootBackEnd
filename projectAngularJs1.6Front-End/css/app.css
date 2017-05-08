@@ -1,0 +1,56 @@
+.centered{
+	margin: auto auto;
+}
+
+.user{
+	width: 40%;
+}
+
+.nao-encontrado{
+	margin-top: 20%;
+}
+
+.usuario .form-control{
+	margin-bottom: 2%;
+}
+
+
+.users{
+
+	width: 90%;
+	margin-top: 5%;
+}
+
+.btn-primary{
+	margin-top: 2%;
+}
+
+.login{
+	width: 23%;
+	margin-top: 5%;
+}
+
+input[type="email"]{
+	text-transform: lowercase;
+}
+
+.alert{
+	margin-top: 5%;
+	word-wrap: break-word;
+}
+
+.login .form-control{
+	margin-top: 5%;
+}
+
+my-logo {
+	display: block;
+	background-color: #2a6496;
+	padding: 50px;
+	font-size: 30px;
+}
+.jumbotron{
+	display: block;
+	background-color: #c4e3f3;
+
+}

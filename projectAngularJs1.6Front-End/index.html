@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="cadastroCapacitacao">
+<head>
+    <title>Cadastro Capacitação</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="css/app.css"/>
+    <link rel="stylesheet" href="css/header-user-dropdown.css">
+</head>
+
+<body ng-controller="AppCtrl">
+<div ng-include="'view/header.html'" ng-if="!currentUser.role == ''"></div>
+<base href="/#">
+<div ui-view></div>
+<div ng-include="'view/footer.html'"></div>
+
+
+
+    <script src="lib/angular/angular.js"></script>
+    <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="lib/angular/angular-messages.js"></script>
+    <script src="lib/angular/ngstorage/ngStorage.js"></script>
+
+    <script src="js/app.js"></script>
+
+    <script src="js/config/locationConfig.js"></script>
+    <script src="js/config/routesConfig.js"></script>
+
+    <script src="js/values/appConfigValue.js"></script>
+    <script src="js/values/constants.js"></script>
+
+    <script src="js/controllers/appCtrl.js"></script>
+    <script src="js/controllers/userCtrl.js"></script>
+    <script src="js/controllers/usersCtrl.js"></script>
+    <script src="js/controllers/authCtrl.js"></script>
+
+    <script src="js/services/authService.js"></script>
+    <script src="js/services/sessionService.js"></script>
+    <script src="js/services/studentsService.js"></script>
+    <script src="js/services/coachesService.js"></script>
+
+    <script src="js/directives/userFormDirective.js"></script>
+    <script src="js/directives/uiAlertDirective.js"></script>
+    <script src="js/directives/requestErrorDirective.js"></script>
+
+
+    <script src="js/authInterceptor.js"></script>
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/services/openHeaderUserMenu.js"></script>
+
+    </body>
+</html>
